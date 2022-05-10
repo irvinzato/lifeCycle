@@ -1,1 +1,16 @@
-<p>pagina1 works!</p>
+<p>Componente "pagina1"</p>
+
+<!-- Antes del ngModule no mostraba nada por que Angular no tenia ninguna relacion con el componente, solo lo mostraba
+Para poder utilizar el ngModel es importante hacer la importacion del formsMoodule-->
+<input type="text" placeholder="Vamos aprender"
+       [(ngModel)]="nombre">
+
+<button (click)="guardar()">
+    Pruebalo
+</button>
+
+<!-- Asi funciona el ngOnChanges -->
+<app-muestra-nombre [nombrePorInput]="nombre"></app-muestra-nombre>
+
+<h3>Contador {{segundos}} </h3>
+
